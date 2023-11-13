@@ -1,6 +1,7 @@
 import urllib3
 
 # async http client connection pool
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 http = urllib3.PoolManager(cert_reqs='CERT_NONE')
 
 
