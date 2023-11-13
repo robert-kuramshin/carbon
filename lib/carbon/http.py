@@ -1,7 +1,7 @@
 import urllib3
 
 # async http client connection pool
-http = urllib3.PoolManager()
+http = urllib3.PoolManager(cert_reqs='CERT_NONE')
 
 
 def httpRequest(url, values=None, headers=None, method='POST', timeout=5):
