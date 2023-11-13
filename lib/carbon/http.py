@@ -15,8 +15,6 @@ def httpRequest(url, values=None, headers=None, method='POST', timeout=5):
       timeout=timeout)
   except BaseException as err:
     raise Exception("Error requesting %s: %s" % (url, err))
-
   if result.status != 200:
     raise Exception("Error response %d from %s" % (result.status, url))
-
   return result.data
